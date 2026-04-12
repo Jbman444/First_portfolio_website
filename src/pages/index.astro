@@ -29,7 +29,13 @@ const pageTitle = "Jorge L. Vargas Lara M.S.";
           </p>
         </div>
 
-        <div class="visual-3d">3D Visual</div>
+        <div class="visual-3d">
+          <img
+            src="/images/Glow_Flow.png"
+            alt="3D scientific visualization"
+            class="visual-3d-image"
+          />
+        </div>
       </section>
 
       <section class="featured-grid">
@@ -96,7 +102,9 @@ const pageTitle = "Jorge L. Vargas Lara M.S.";
 
   .home-page {
     min-height: 0;
-    padding: 0.85rem 1rem 5rem;
+    padding: 0.85rem 2rem 5rem;
+    max-width: 1400px;          /* controls total width */
+    margin: 0 auto;    
     display: grid;
     grid-template-rows: auto auto;
     gap: 0.8rem;
@@ -104,9 +112,9 @@ const pageTitle = "Jorge L. Vargas Lara M.S.";
 
   .hero {
     display: grid;
-    grid-template-columns: 1.8fr 0.7fr;
+    grid-template-columns: minmax(0, 1.8fr) minmax(240px, 0.9fr);
     gap: 0.8rem;
-    align-items: start;
+    align-items: center;
   }
 
   .hero-text {
@@ -144,12 +152,28 @@ const pageTitle = "Jorge L. Vargas Lara M.S.";
   }
 
   .visual-3d {
-    min-height: 100px;
     border-radius: 1rem;
     background: #cbd5e1;
+    overflow: hidden;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    padding: 1.6rem 1.8rem; /* 👈 less vertical, more horizontal */
+  }
+
+  .visual-3d-image {
+    width: 100%;
+    height: auto;  .hero {
     display: grid;
-    place-items: center;
-    font-weight: 600;
+    grid-template-columns: minmax(0, 1.8fr) minmax(240px, 0.9fr);
+    gap: 0.8rem;
+    align-items: center;
+  }
+    max-height: 360px;   /* 👈 THIS is the key */
+    object-fit: contain;
+    display: block;
   }
 
   :global(html.dark) .visual-3d {
@@ -211,16 +235,22 @@ const pageTitle = "Jorge L. Vargas Lara M.S.";
   }
 
   @media (max-width: 900px) {
-    .hero {
-      grid-template-columns: 1fr;
-    }
-
     .featured-grid {
       grid-template-columns: 1fr;
     }
 
     .home-page {
       padding-bottom: 5.5rem;
+    }
+  }
+
+  @media (max-width: 680px) {
+    .hero {
+      grid-template-columns: 1fr;
+    }
+
+    .visual-3d {
+      min-height: 220px;
     }
   }
 </style>
