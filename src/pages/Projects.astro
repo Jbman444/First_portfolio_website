@@ -21,6 +21,7 @@ const pageTitle = "Notable Projects";
     <Header />
 
     <main class="projects-page">
+      <!-- PAGE INTRO -->
       <section class="hero">
         <div class="hero-text">
           <p class="eyebrow">Projects</p>
@@ -30,30 +31,45 @@ const pageTitle = "Notable Projects";
             analysis work from my portfolio.
           </p>
         </div>
-
-        <div class="visual-3d">Project Archive</div>
       </section>
 
+      <!-- PROJECT GRID -->
       <section class="featured-grid">
         {allPosts.map((post: any) => (
           <article class="card">
             <a class="card-link" href={post.url}>
+
+              <!-- IMAGE AREA -->
               <div class="visual">
                 {post.frontmatter.image?.url ? (
-                  <img
-                    src={post.frontmatter.image.url}
-                    alt={post.frontmatter.image.alt ?? post.frontmatter.title}
-                  />
+                  <>
+                    <img
+                      src={post.frontmatter.image.url}
+                      alt={post.frontmatter.image.alt ?? post.frontmatter.title}
+                      class="project-image light-image"
+                    />
+
+                    {post.frontmatter.imageDark?.url && (
+                      <img
+                        src={post.frontmatter.imageDark.url}
+                        alt={post.frontmatter.imageDark.alt ?? post.frontmatter.title}
+                        class="project-image dark-image"
+                      />
+                    )}
+                  </>
                 ) : (
                   <span>Project</span>
                 )}
               </div>
 
-              <h2>{post.frontmatter.title}</h2>
+              <!-- TEXT AREA -->
+              <div class="card-content">
+                <h2>{post.frontmatter.title}</h2>
 
-              {post.frontmatter.description && (
-                <p class="card-text">{post.frontmatter.description}</p>
-              )}
+                {post.frontmatter.description && (
+                  <p class="card-text">{post.frontmatter.description}</p>
+                )}
+              </div>
             </a>
           </article>
         ))}
@@ -94,17 +110,16 @@ const pageTitle = "Notable Projects";
 
   .projects-page {
     min-height: 0;
-    padding: 0.75rem 1rem 5rem;
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 0.9rem 1.25rem 5rem;
     display: grid;
-    grid-template-rows: auto 1fr;
-    gap: 0.7rem;
+    gap: 1rem;
   }
 
+  /* PAGE INTRO */
   .hero {
-    display: grid;
-    grid-template-columns: 1.5fr 0.85fr;
-    gap: 0.7rem;
-    align-items: start;
+    display: block;
   }
 
   .hero-text {
@@ -124,16 +139,16 @@ const pageTitle = "Notable Projects";
   }
 
   .floating-name {
-    margin: 0 0 0.3rem;
+    margin: 0 0 0.35rem;
     font-size: clamp(1.9rem, 4vw, 3rem);
     line-height: 0.95;
   }
 
   .intro {
     margin: 0;
-    max-width: 58ch;
-    font-size: 0.92rem;
-    line-height: 1.3;
+    max-width: 62ch;
+    font-size: 0.95rem;
+    line-height: 1.4;
     color: #334155;
   }
 
@@ -141,33 +156,19 @@ const pageTitle = "Notable Projects";
     color: #e2e8f0;
   }
 
-  .visual-3d {
-    min-height: 100px;
-    border-radius: 1rem;
-    background: #cbd5e1;
-    display: grid;
-    place-items: center;
-    font-weight: 600;
-  }
-
-  :global(html.dark) .visual-3d {
-    background: rgba(255, 255, 255, 0.14);
-    color: white;
-  }
-
+  /* GRID OF PROJECTS */
   .featured-grid {
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 0.7rem;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 1rem;
     align-items: stretch;
-    min-height: 0;
   }
 
+  /* EACH PROJECT CARD */
   .card {
     border: 1px solid #cbd5e1;
     border-radius: 1rem;
     background: white;
-    min-height: 185px;
     overflow: hidden;
   }
 
@@ -180,43 +181,60 @@ const pageTitle = "Notable Projects";
     height: 100%;
     display: flex;
     flex-direction: column;
-    gap: 0.45rem;
-    padding: 0.65rem;
     text-decoration: none;
     color: inherit;
   }
 
+  /* LARGE IMAGE AREA */
   .visual {
-    height: 88px;
-    border-radius: 0.75rem;
-    background: #e2e8f0;
-    display: grid;
-    place-items: center;
-    overflow: hidden;
-    font-weight: 600;
-  }
-
-  .visual img {
+    position: relative;
     width: 100%;
-    height: 100%;
-    object-fit: cover;
-    display: block;
+    min-height: 320px;
+    background: #e2e8f0;
+    overflow: hidden;
   }
 
   :global(html.dark) .visual {
     background: rgba(255, 255, 255, 0.12);
   }
 
+  .project-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+  }
+
+  /* dark mode image switching */
+  .dark-image {
+    display: none;
+  }
+
+  :global(html.dark) .light-image {
+    display: none;
+  }
+
+  :global(html.dark) .dark-image {
+    display: block;
+  }
+
+  /* TEXT BLOCK BELOW IMAGE */
+  .card-content {
+    padding: 0.9rem 1rem 1rem;
+    display: grid;
+    gap: 0.45rem;
+  }
+
   .card h2 {
     margin: 0;
-    font-size: 0.98rem;
-    line-height: 1.08;
+    font-size: 1.05rem;
+    line-height: 1.15;
   }
 
   .card-text {
     margin: 0;
-    font-size: 0.84rem;
-    line-height: 1.2;
+    font-size: 0.9rem;
+    line-height: 1.45;
     color: #475569;
   }
 
@@ -224,17 +242,18 @@ const pageTitle = "Notable Projects";
     color: #dbeafe;
   }
 
+  /* RESPONSIVE */
   @media (max-width: 900px) {
     .projects-page {
       padding-bottom: 5.5rem;
     }
 
-    .hero {
+    .featured-grid {
       grid-template-columns: 1fr;
     }
 
-    .featured-grid {
-      grid-template-columns: 1fr;
+    .visual {
+      min-height: 260px;
     }
   }
 </style>
