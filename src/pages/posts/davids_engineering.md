@@ -12,6 +12,7 @@ imageDark:
   alt: "Davids Engineering fieldwork cover image dark mode"
 
 hideHeroImage: true
+tags: []
 ---
 
 ## Overview

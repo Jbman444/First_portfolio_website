@@ -10,6 +10,7 @@ image:
 imageDark:
   url: "/images/education/aircraft.jpg"
   alt: "Education outreach presentation (dark mode)"
+tags: []
 ---
 
 ## Overview

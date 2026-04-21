@@ -10,6 +10,7 @@ image:
 imageDark:
   url: "/images/modflow_colton/colton_1.png"
   alt: "Final hydraulic head contour map"
+tags: []
 ---
 
 
@@ -249,3 +250,8 @@ This work is still under development, but it represents an important next step t
 <p class="figure-caption">
   Experimental 3D lithology model produced from machine learning hydrofacies predictions based on borehole data. This developing workflow is intended to improve subsurface characterization for future groundwater flow and subsidence analysis.
 </p>
+
+
+
+
+
