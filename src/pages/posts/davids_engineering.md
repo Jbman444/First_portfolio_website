@@ -1,7 +1,7 @@
 ---
 layout: ../../layouts/MarkdownPostLayout.astro
-title: Davids Engineering Fieldwork
-description: "Field and office work supporting water resources analysis, data collection, and technical workflows at Davids Engineering."
+title: Davids Engineering
+description: "Field and engineering experience supporting groundwater and surface water analysis, data workflows, and SGMA-related reporting at Davids Engineering."
 
 image:
   url: "/images/davids_engineering/davids_01.jpg"
@@ -15,82 +15,73 @@ hideHeroImage: true
 ---
 
 ## Overview
-This project highlights field and office work completed at Davids Engineering in support of water resources and environmental analysis. The work included site visits, documentation, data collection, technical review, and office-based analysis that supported broader engineering workflows.
+This project highlights professional experience at Davids Engineering, where I contributed to both field operations and office-based analysis supporting water resources engineering projects. Work included environmental data collection, technical evaluation, GIS analysis, and development of data-driven insights for SGMA-related reporting and groundwater management efforts.
 
-## Photo Collage
+---
+
+## Field work
 
 <div class="photo-collage">
+
   <figure>
-    <img src="/images/davids_engineering/davids_01.jpg" alt="Field visit at water infrastructure site" />
-    <figcaption>Site visit and field documentation during project support work.</figcaption>
+    <img src="/images/davids_engineering/davids_01.jpg" alt="Sensor installation in agricultural field" />
+    <figcaption>Installation of HOBO sensors as part of the Sutter Mutual Water Company salinity and water monitoring program.</figcaption>
+  </figure>
+
+  <figure>
+    <img src="/images/davids_engineering/davids_03.jpg" alt="Sensor installation near rice field inlet" />
+    <figcaption>Field deployment of sensors near a rice field inlet to monitor flow and water quality conditions.</figcaption>
+  </figure>
+
+  <figure>
+    <img src="/images/davids_engineering/davids_04.jpg" alt="Data processing and analysis" />
+    <figcaption>Programming and data analysis workflows used to process environmental and monitoring datasets.</figcaption>
+  </figure>
+
+  <figure>
+    <img src="/images/davids_engineering/davids_05.jpg" alt="Office engineering work" />
+    <figcaption>Office-based engineering work including data review, reporting, and technical documentation.</figcaption>
+  </figure>
+
+  <figure>
+    <img src="/images/davids_engineering/davids_06.jpg" alt="Soil sampling fieldwork" />
+    <figcaption>Soil sampling to quantify spatial variability in moisture and salinity along the Sacramento River, supporting water accounting and SGMA reporting.</figcaption>
+  </figure>
+
+  <figure>
+    <img src="/images/davids_engineering/davids_08.png" alt="GIS map of water usage trends" />
+    <figcaption>GIS-based analysis using Python to process and categorize public datasets, identifying regional trends in water use for SGMA reporting.</figcaption>
   </figure>
 
 
 
-  <figure>
-    <img src="/images/davids_engineering/davids_03.jpg" alt="Collecting site information in the field" />
-    <figcaption>Recording field information to support technical evaluation.</figcaption>
-  </figure>
-
-  <figure>
-    <img src="/images/davids_engineering/davids_04.jpg" alt="Water resources fieldwork view" />
-    <figcaption>Field perspective from a project site visit.</figcaption>
-  </figure>
-
-  <figure>
-    <img src="/images/davids_engineering/davids_05.jpg" alt="Office workspace during engineering analysis" />
-    <figcaption>Office-based project work, review, and documentation.</figcaption>
-  </figure>
-
-  <figure>
-    <img src="/images/davids_engineering/davids_06.jpg" alt="Working at desk on technical tasks" />
-    <figcaption>Supporting analysis and technical workflows in the office.</figcaption>
-  </figure>
-
-  <figure>
-    <img src="/images/davids_engineering/davids_07.png" alt="Environmental field conditions" />
-    <figcaption>Example of field conditions encountered during project work.</figcaption>
-  </figure>
-
-  <!-- <figure>
-    <img src="/images/davids_08.jpg" alt="Engineering field activity" />
-    <figcaption>On-site work connected to water resources investigation.</figcaption>
-  </figure>
-
-  <figure>
-    <img src="/images/davids_09.jpg" alt="Office collaboration and project review" />
-    <figcaption>Office work supporting project coordination and analysis.</figcaption>
-  </figure>
-
-  <figure>
-    <img src="/images/davids_10.jpg" alt="Reviewing technical information at workstation" />
-    <figcaption>Reviewing project materials and engineering data.</figcaption>
-  </figure>
-
-  <figure>
-    <img src="/images/davids_11.jpg" alt="Additional fieldwork scene" />
-    <figcaption>Additional field documentation and site context.</figcaption>
-  </figure>
-
-  <figure>
-    <img src="/images/davids_12.jpg" alt="Additional office work scene" />
-    <figcaption>Office-based support work tied to engineering deliverables.</figcaption>
-  </figure> -->
 </div>
 
+---
+
 ## Methods
-- Field observation and project documentation
-- Data organization and technical review
-- Office-based engineering support
-- Communication of findings and project progress
+- Field data collection (soil sampling, sensor installation, site documentation)
+- Data processing and analysis using Python and Excel
+- GIS-based spatial analysis and visualization
+- Technical review and validation of modeling inputs
+- Communication of findings through reports and presentations
+
+---
 
 ## Tools & Skills
-Field Documentation, Technical Communication, Data Organization, Environmental Engineering Support, Office and Field Coordination
+Python • QGIS • Excel • Data Analysis • Field Instrumentation • Technical Reporting • Environmental Monitoring • GIS Mapping
+
+---
 
 ## Key Outcomes
-- Supported engineering work through both field and office contributions
-- Strengthened technical documentation and project workflow experience
-- Built experience connecting field observations with analytical tasks
+- Analyzed regional surface water data using Python and Excel to identify trends in water use for SGMA Annual Reports  
+- Evaluated contributions of different water users, identifying irrigation as the dominant driver of regional demand  
+- Investigated discrepancies in IWFM surface water inputs (2022–2025), identifying the transition from EWRIMS to supplier-reported data as a key source of variation  
+- Authored a technical report recommending improved data sourcing methods for future reporting workflows  
+- Assessed evapotranspiration (ET) inputs for Tehama County using Python and QGIS, finding that additional CIMIS stations provided minimal improvement relative to labor cost  
+- Conducted fieldwork to quantify spatial variability in soil moisture and salinity, linking field observations to regional groundwater and surface water processes  
+
+---
 
 ## Notes
-This project reflects applied professional experience at Davids Engineering and highlights the balance between fieldwork, office analysis, and technical support.
+This experience reflects applied engineering work at the intersection of field data collection, geospatial analysis, and water resources modeling. The combination of on-site measurements and data-driven analysis strengthened my ability to connect physical processes in the field with regional-scale water management and reporting efforts.

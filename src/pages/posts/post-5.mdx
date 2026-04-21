@@ -1,7 +1,7 @@
 ---
 layout: ../../layouts/MarkdownPostLayout.astro
 title: Biofilms Thesis
-description: "Pore-scale investigation of biofilm growth and its impact on flow and transport in porous media."
+description: "Pore-scale investigation of how biofilms alter flow distribution and contaminant transport in groundwater systems."
 
 image:
   url: "/images/Glow_Flow_April13_NF.png"
@@ -17,34 +17,98 @@ hideHeroImage: true
 import ZoomImage from '../../components/ZoomImage.astro';
 
 ## Overview
-This project investigates how biofilm development alters flow and transport behavior in porous media systems. Using pore-scale simulations and image-based analysis, the work explores how biological growth modifies hydraulic pathways and impacts mass transport.
+This research investigates how biofilm growth alters groundwater flow and contaminant transport at the pore scale. Biofilms—microbial communities that develop on grain surfaces—can significantly modify pore geometry, changing flow pathways and redistributing velocities within porous media.
+
+These changes directly impact mass transport and reaction rates, with important implications for processes such as groundwater remediation, nutrient cycling, and contaminant degradation. By resolving these effects at the pore scale, this work aims to improve how subsurface systems are represented in larger-scale groundwater models.
+
+---
 
 ## Presentation
-<img src="/images/IMG_5565.jpg" alt="Presentation BTC" style="max-width: 900px; width: 100%;" />
 
-Presenting thesis research on biofilm development, pore-scale flow behavior, and transport processes in porous media.
+<img src="/images/IMG_5565.jpg" alt="Thesis presentation" style="max-width: 900px; width: 100%;" />
 
-## Collaboration
-![Poster Session](/images/hamid_jorge_swegs.jpg)
+Presenting research findings on biofilm-driven flow alteration and transport processes in porous media.
+---
 
-Discussing methods, results, and applications of the research during a poster session and technical showcase.
+## Research Focus
+The central question of this work is:
+
+**How does biofilm growth modify flow distribution and, in turn, influence transport and reaction processes in porous media?**
+
+To address this, the project combines experimental imaging with computational modeling to capture both the structure and dynamics of biofilm-impacted systems.
+
+---
 
 ## Methods
-- Computational Fluid Dynamics (CFD) simulations of pore-scale flow
-- Image processing and segmentation of experimental data
-- Velocity field and transport analysis
-- Python-based data processing and workflow automation
+
+- Designed a robust workflow for generating pore-scale **Computational Fluid Dynamics (CFD)** simulations in porous media  
+- Converted high-resolution experimental biofilm images into **3D geometries** using Python and Blender  
+- Performed **image segmentation and preprocessing** to isolate pore space and biofilm regions  
+- Simulated flow and transport using **OpenFOAM**, resolving velocity fields and concentration dynamics  
+- Automated simulation pipelines using **Python and Bash**, improving reproducibility and efficiency  
+- Processed large datasets into **publication-quality visualizations**  
+
+---
+
+## Contaminant Transport Visualization
+
+<div class="video-container small-video">
+  <video controls preload="metadata">
+    <source src="/T0.mp4" type="video/mp4" />
+    Your browser does not support the video tag.
+  </video>
+</div>
+
+<p class="figure-caption">
+  Pore-scale contaminant transport simulation showing how biofilm growth redistributes flow pathways and alters solute transport. Preferential flow channels emerge as biofilm occludes portions of the pore space, impacting residence time and reaction potential.
+</p>
+
+---
+
+## Results & Insights
+
+- Biofilm growth leads to **preferential flow channeling**, concentrating flow into limited pathways  
+- Reduced pore space connectivity results in **localized velocity increases** and stagnant zones  
+- These changes significantly impact **solute residence time and mixing behavior**  
+- Transport dynamics suggest strong implications for **reaction rates and contaminant degradation efficiency**  
+- Demonstrated that small-scale biological processes can have **large-scale impacts on groundwater system behavior**  
+
+---
+
+## Up close look at flow distribution with biofilm
+
+<ZoomImage src="/images/new_turbo_b_low.png" alt="Velocity Field showing preferential flow paths" />
+
+---
+
+
+---
+
+## Collaboration
+
+![Poster Session](/images/hamid_jorge_swegs.jpg)
+
+Engaging with researchers and peers to discuss modeling approaches, experimental methods, and implications for groundwater systems.
+
+---
 
 ## Tools & Skills
-CFD (OpenFOAM), Python, Image Processing, Data Analysis, Scientific Visualization
 
-## Key Outcomes
-- Quantified impact of biofilm growth on permeability and flow distribution
-- Developed reproducible workflows for simulation and analysis
-- Integrated experimental imaging with numerical modeling
+OpenFOAM • Python • Blender • Image Processing • CFD • Scientific Visualization • Data Analysis • Bash Automation
 
-## Visualization
-<ZoomImage src="/images/new_turbo_b_low.png" alt="Velocity Field" />
+---
+
+## Broader Impact
+
+This work contributes to a better understanding of how biological processes influence groundwater systems. By linking pore-scale dynamics to transport and reaction behavior, the research supports improved modeling of:
+
+- Groundwater remediation strategies  
+- Contaminant fate and transport  
+- Biogeochemical reaction processes  
+- Subsurface flow heterogeneity  
+
+---
 
 ## Notes
-This work was completed as part of a Master’s thesis and contributed to peer-reviewed research on biofilm dynamics in porous media.
+
+This research was conducted as part of a Master’s thesis in the Morales Lab at UC Davis. Weekly presentations and technical discussions supported the development of strong communication skills alongside computational and analytical expertise.
