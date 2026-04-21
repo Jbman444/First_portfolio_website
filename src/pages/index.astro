@@ -31,9 +31,15 @@ const pageTitle = "Jorge L. Vargas Lara M.S.";
 
         <div class="visual-3d">
           <img
-            src="/images/Glow_Flow.png"
+            src="/images/Glow_Flow_April13_NF.png"
             alt="3D scientific visualization"
-            class="visual-3d-image"
+            class="visual-3d-image light-image"
+          />
+
+          <img
+            src="/images/Glow_Flow_April13.png"
+            alt="3D scientific visualization"
+            class="visual-3d-image dark-image"
           />
         </div>
       </section>
@@ -155,30 +161,35 @@ const pageTitle = "Jorge L. Vargas Lara M.S.";
     border-radius: 1rem;
     background: #cbd5e1;
     overflow: hidden;
-
     display: flex;
     align-items: center;
     justify-content: center;
-
-    padding: 1.6rem 1.8rem; /* 👈 less vertical, more horizontal */
+    padding: 1.6rem 1.8rem;
   }
 
   .visual-3d-image {
     width: 100%;
-    height: auto;  .hero {
-    display: grid;
-    grid-template-columns: minmax(0, 1.8fr) minmax(240px, 0.9fr);
-    gap: 0.8rem;
-    align-items: center;
-  }
-    max-height: 360px;   /* 👈 THIS is the key */
+    height: auto;
+    max-height: 660px;
     object-fit: contain;
     display: block;
+  }
+
+  .dark-image {
+    display: none;
   }
 
   :global(html.dark) .visual-3d {
     background: rgba(255, 255, 255, 0.14);
     color: white;
+  }
+
+  :global(html.dark) .light-image {
+    display: none;
+  }
+
+  :global(html.dark) .dark-image {
+    display: block;
   }
 
   .featured-grid {
