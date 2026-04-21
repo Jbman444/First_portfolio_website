@@ -17,61 +17,108 @@ const pageTitle = "Jorge L. Vargas Lara M.S.";
     <Header />
 
     <main class="home-page">
+
       <section class="hero">
         <div class="hero-text">
           <p class="eyebrow">Water Resources • Modeling • CFD</p>
+
           <h1 class="floating-name">Jorge L. Vargas Lara</h1>
+
           <p class="intro">
             I am a Water Resources Engineer focused on computational modeling,
             groundwater systems, and pore-scale flow processes. My work combines
             physics-based simulation with data-driven analysis to better understand
             environmental systems.
           </p>
+
+          <div class="hero-tags">
+            <span>OpenFOAM</span>
+            <span>MODFLOW</span>
+            <span>Python</span>
+            <span>QGIS</span>
+          </div>
         </div>
 
-        <div class="visual-3d">
+        <!-- HERO PROFILE IMAGE -->
+        <div class="profile-wrap">
           <img
-            src="/images/Glow_Flow_April13_NF.png"
-            alt="3D scientific visualization"
-            class="visual-3d-image light-image"
-          />
-
-          <img
-            src="/images/Glow_Flow_April13.png"
-            alt="3D scientific visualization"
-            class="visual-3d-image dark-image"
+            src="/images/cover.png"
+            alt="Portrait of Jorge L. Vargas Lara"
+            class="profile-image"
           />
         </div>
       </section>
 
       <section class="featured-grid">
-        <article class="card">
-          <div class="visual">Biofilm</div>
+
+        <a href="/posts/post-5" class="card">
+          <div class="card-visual">
+            <img
+              src="/images/Glow_Flow_April13_sub.png"
+              alt="Biofilm research preview"
+              class="card-image"
+            />
+            <div class="card-label">Biofilm</div>
+          </div>
+
           <h2>Biofilm Research</h2>
+
           <p class="card-text">
             Pore-scale simulations and image-based modeling to study biofilm growth
-            and its impact on flow and transport.
+            and its impact on flow and transport in porous systems.
           </p>
-        </article>
 
-        <article class="card">
-          <div class="visual">Groundwater</div>
+          <p class="card-tags">OpenFOAM • microscopy • transport</p>
+
+          <span class="card-link-text">View project →</span>
+        </a>
+
+        <a href="/posts/modflow" class="card">
+          <div class="card-visual">
+            <img
+              src="/images/modflow_colton/colton_1.png"
+              alt="Groundwater modeling preview"
+              class="card-image"
+            />
+            <div class="card-label">Groundwater</div>
+          </div>
+
           <h2>Groundwater Modeling</h2>
-          <p class="card-text">
-            MODFLOW and regional hydrogeologic analysis to evaluate groundwater
-            systems and water resource management.
-          </p>
-        </article>
 
-        <article class="card">
-          <div class="visual">Data</div>
-          <h2>Data & Visualization</h2>
           <p class="card-text">
-            Python-based workflows for processing, analyzing, and visualizing
-            environmental and simulation data.
+            MODFLOW-based hydrogeologic modeling and regional analysis to evaluate
+            groundwater systems and support water resource planning.
           </p>
-        </article>
+
+          <p class="card-tags">MODFLOW • hydrogeology • water resources</p>
+
+          <span class="card-link-text">View project →</span>
+        </a>
+
+        <a href="/posts/davids_engineering" class="card">
+          <div class="card-visual">
+            <img
+              src="/images/davids_engineering/davids_01.jpg"
+              alt="Field Work at Davids Engineering"
+              class="card-image"
+            />
+            <div class="card-label">Fieldwork</div>
+          </div>
+
+          <h2>Davids Engineering</h2>
+
+          <p class="card-text">
+            Field data collection, soil moisture and salinity analysis, and applied
+            water resources support work.
+          </p>
+
+          <p class="card-tags">Fieldwork • Data Collection • Equipment Management</p>
+
+          <span class="card-link-text">View project →</span>
+        </a>
+
       </section>
+
     </main>
 
     <Footer />
@@ -107,19 +154,17 @@ const pageTitle = "Jorge L. Vargas Lara M.S.";
   }
 
   .home-page {
-    min-height: 0;
-    padding: 0.85rem 2rem 5rem;
-    max-width: 1400px;          /* controls total width */
-    margin: 0 auto;    
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 0.85rem 2rem 4rem;
     display: grid;
-    grid-template-rows: auto auto;
-    gap: 0.8rem;
+    gap: 1.2rem;
   }
 
   .hero {
     display: grid;
-    grid-template-columns: minmax(0, 1.8fr) minmax(240px, 0.9fr);
-    gap: 0.8rem;
+    grid-template-columns: minmax(0, 1.5fr) minmax(260px, 0.9fr);
+    gap: 1.2rem;
     align-items: center;
   }
 
@@ -140,7 +185,7 @@ const pageTitle = "Jorge L. Vargas Lara M.S.";
   }
 
   .floating-name {
-    margin: 0 0 0.35rem;
+    margin: 0 0 0.4rem;
     font-size: clamp(2rem, 4vw, 3.2rem);
     line-height: 0.95;
   }
@@ -149,7 +194,7 @@ const pageTitle = "Jorge L. Vargas Lara M.S.";
     margin: 0;
     max-width: 65ch;
     font-size: 0.98rem;
-    line-height: 1.4;
+    line-height: 1.45;
     color: #334155;
   }
 
@@ -157,56 +202,77 @@ const pageTitle = "Jorge L. Vargas Lara M.S.";
     color: #e2e8f0;
   }
 
-  .visual-3d {
-    border-radius: 1rem;
-    background: #cbd5e1;
-    overflow: hidden;
+  .hero-tags {
     display: flex;
-    align-items: center;
+    flex-wrap: wrap;
+    gap: 0.45rem;
+    margin-top: 0.8rem;
+  }
+
+  .hero-tags span {
+    padding: 0.35rem 0.65rem;
+    border-radius: 999px;
+    background: #dbeafe;
+    font-size: 0.8rem;
+    font-weight: 600;
+    color: #1e3a8a;
+  }
+
+  :global(html.dark) .hero-tags span {
+    background: rgba(255, 255, 255, 0.1);
+    color: #dbeafe;
+  }
+
+  /* HERO PROFILE IMAGE */
+  .profile-wrap {
+    display: flex;
     justify-content: center;
-    padding: 1.6rem 1.8rem;
+    align-items: center;
+    padding: 0.5rem;
   }
 
-  .visual-3d-image {
-    width: 100%;
-    height: auto;
-    max-height: 660px;
-    object-fit: contain;
+  .profile-image {
+    width: min(320px, 78vw);
+    aspect-ratio: 1 / 1;
+    object-fit: cover;
+    border-radius: 50%;
     display: block;
+    border: 6px solid rgba(255, 255, 255, 0.85);
+    box-shadow: 0 14px 36px rgba(15, 23, 42, 0.18);
+    background: #cbd5e1;
   }
 
-  .dark-image {
-    display: none;
+  :global(html.dark) .profile-image {
+    border-color: rgba(255, 255, 255, 0.18);
+    box-shadow: 0 14px 36px rgba(0, 0, 0, 0.35);
+    background: rgba(255, 255, 255, 0.08);
   }
 
-  :global(html.dark) .visual-3d {
-    background: rgba(255, 255, 255, 0.14);
-    color: white;
-  }
-
-  :global(html.dark) .light-image {
-    display: none;
-  }
-
-  :global(html.dark) .dark-image {
-    display: block;
-  }
-
+  /* FEATURED GRID */
   .featured-grid {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    gap: 0.8rem;
-    align-items: stretch;
+    gap: 0.9rem;
   }
 
   .card {
+    text-decoration: none;
+    color: inherit;
     border: 1px solid #cbd5e1;
     border-radius: 1rem;
-    padding: 0.7rem;
+    padding: 0.8rem;
     background: white;
-    min-height: 165px;
     display: flex;
     flex-direction: column;
+    min-height: 260px;
+    overflow: hidden;
+    transition: transform 0.18s ease, box-shadow 0.18s ease, border-color 0.18s ease;
+  }
+
+  .card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 10px 30px rgba(15, 23, 42, 0.10);
+    border-color: #93c5fd;
   }
 
   :global(html.dark) .card {
@@ -214,30 +280,64 @@ const pageTitle = "Jorge L. Vargas Lara M.S.";
     border-color: rgba(255, 255, 255, 0.14);
   }
 
-  .visual {
-    height: 56px;
-    border-radius: 0.75rem;
+  .card-visual {
+    position: relative;
+    height: 170px;
+    border-radius: 0.8rem;
+    overflow: hidden;
     background: #e2e8f0;
-    display: grid;
-    place-items: center;
-    margin-bottom: 0.5rem;
-    font-weight: 600;
+    margin-bottom: 0.75rem;
   }
 
-  :global(html.dark) .visual {
-    background: rgba(255, 255, 255, 0.12);
+  :global(html.dark) .card-visual {
+    background: rgba(255, 255, 255, 0.08);
+  }
+
+  .card-image {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transform: scale(1);
+    transition: transform 0.28s ease, opacity 0.28s ease;
+    opacity: 0.94;
+  }
+
+  .card:hover .card-image {
+    transform: scale(1.12);
+    opacity: 1;
+  }
+
+  .card-label {
+    position: absolute;
+    left: 0.7rem;
+    bottom: 0.7rem;
+    padding: 0.3rem 0.55rem;
+    border-radius: 999px;
+    font-weight: 700;
+    font-size: 0.82rem;
+    color: white;
+    background: rgba(15, 23, 42, 0.62);
+    backdrop-filter: blur(4px);
+    transition: transform 0.2s ease, opacity 0.2s ease;
+  }
+
+  .card:hover .card-label {
+    transform: translateY(4px);
+    opacity: 0;
   }
 
   .card h2 {
-    margin: 0 0 0.35rem;
+    margin: 0 0 0.4rem;
     font-size: 1rem;
-    line-height: 1.1;
+    line-height: 1.15;
   }
 
   .card-text {
-    margin: 0;
-    font-size: 0.87rem;
-    line-height: 1.25;
+    margin: 0 0 0.55rem;
+    font-size: 0.88rem;
+    line-height: 1.35;
     color: #475569;
   }
 
@@ -245,23 +345,48 @@ const pageTitle = "Jorge L. Vargas Lara M.S.";
     color: #dbeafe;
   }
 
+  .card-tags {
+    margin: 0 0 0.7rem;
+    font-size: 0.8rem;
+    color: #64748b;
+  }
+
+  :global(html.dark) .card-tags {
+    color: #cbd5e1;
+  }
+
+  .card-link-text {
+    margin-top: auto;
+    font-size: 0.85rem;
+    font-weight: 700;
+    color: #2563eb;
+  }
+
+  :global(html.dark) .card-link-text {
+    color: #93c5fd;
+  }
+
   @media (max-width: 900px) {
     .featured-grid {
       grid-template-columns: 1fr;
     }
-
-    .home-page {
-      padding-bottom: 5.5rem;
-    }
   }
 
-  @media (max-width: 680px) {
+  @media (max-width: 700px) {
     .hero {
       grid-template-columns: 1fr;
     }
 
-    .visual-3d {
-      min-height: 220px;
+    .home-page {
+      padding: 0.85rem 1rem 4rem;
+    }
+
+    .profile-image {
+      width: min(260px, 72vw);
+    }
+
+    .card-visual {
+      height: 190px;
     }
   }
 </style>

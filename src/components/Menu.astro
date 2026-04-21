@@ -1,5 +1,120 @@
 ---
+const menuId = "main-menu";
 ---
-<button aria-expanded="false" aria-controls="main-menu" class="menu">
-  Menu
-</button>
+
+<div class="mobile-menu">
+  <button
+    aria-expanded="false"
+    aria-controls={menuId}
+    class="menu"
+    type="button"
+  >
+    Menu
+  </button>
+
+  <div id={menuId} class="menu-panel">
+    <a href="/">Home</a>
+    <a href="/projects">Projects</a>
+    <!-- <a href="/about">About</a> -->
+    <!-- <a href="/contact">Contact</a> -->
+  </div>
+</div>
+
+<script define:vars={{ menuId }}>
+  (() => {
+    const root = document.currentScript?.previousElementSibling;
+    if (!root) return;
+
+    const button = root.querySelector('.menu');
+    const panel = root.querySelector('.menu-panel');
+
+    if (!button || !panel) return;
+
+    button.addEventListener('click', () => {
+      const isOpen = panel.classList.toggle('open');
+      button.setAttribute('aria-expanded', String(isOpen));
+    });
+
+    panel.querySelectorAll('a').forEach((link) => {
+      link.addEventListener('click', () => {
+        panel.classList.remove('open');
+        button.setAttribute('aria-expanded', 'false');
+      });
+    });
+
+    document.addEventListener('click', (event) => {
+      if (!root.contains(event.target)) {
+        panel.classList.remove('open');
+        button.setAttribute('aria-expanded', 'false');
+      }
+    });
+  })();
+</script>
+
+<style>
+  .mobile-menu {
+    position: relative;
+  }
+
+  .menu {
+    border: 1px solid #cbd5e1;
+    background: #f8fafc;
+    color: #111827;
+    border-radius: 0.75rem;
+    padding: 0.45rem 0.75rem;
+    font: inherit;
+    font-weight: 600;
+    cursor: pointer;
+  }
+
+  :global(html.dark) .menu {
+    background: rgba(255, 255, 255, 0.08);
+    color: white;
+    border-color: rgba(255, 255, 255, 0.18);
+  }
+
+  .menu-panel {
+    position: absolute;
+    top: calc(100% + 0.5rem);
+    right: 0;
+    min-width: 180px;
+    display: none;
+    flex-direction: column;
+    gap: 0.2rem;
+    padding: 0.45rem;
+    border-radius: 0.9rem;
+    background: white;
+    border: 1px solid #cbd5e1;
+    box-shadow: 0 12px 30px rgba(15, 23, 42, 0.14);
+    z-index: 1000;
+  }
+
+  .menu-panel.open {
+    display: flex;
+  }
+
+  .menu-panel a {
+    text-decoration: none;
+    color: #111827;
+    padding: 0.6rem 0.75rem;
+    border-radius: 0.65rem;
+    font-weight: 500;
+  }
+
+  .menu-panel a:hover {
+    background: #f1f5f9;
+  }
+
+  :global(html.dark) .menu-panel {
+    background: #1e1b6b;
+    border-color: rgba(255, 255, 255, 0.14);
+  }
+
+  :global(html.dark) .menu-panel a {
+    color: white;
+  }
+
+  :global(html.dark) .menu-panel a:hover {
+    background: rgba(255, 255, 255, 0.08);
+  }
+</style>

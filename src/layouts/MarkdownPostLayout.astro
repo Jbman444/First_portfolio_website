@@ -3,12 +3,14 @@ import BaseLayout from './BaseLayout.astro';
 
 const { frontmatter } = Astro.props;
 
+
 const {
   title,
   description,
   pubDate,
   image,
   tags = [],
+  hideHeroImage = false,
 } = frontmatter;
 
 const formattedDate = pubDate
@@ -27,12 +29,12 @@ const formattedDate = pubDate
       {formattedDate && <p class="post-date">{formattedDate}</p>}
     </header>
 
-    {image?.url && (
-      <img
+    {image?.url && !hideHeroImage && (
+    <img
         class="post-image"
         src={image.url}
         alt={image.alt ?? ''}
-      />
+    />
     )}
 
     <div class="post-content">
