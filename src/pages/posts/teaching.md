@@ -45,7 +45,7 @@ Public Speaking • Mentorship • Science Communication • Curriculum Developm
 - Taught students how to develop term projects using OpenFOAM and Python  
 - Created structured learning materials and example workflows hosted on GitHub  
 - Focused on building intuition in fluid mechanics alongside practical simulation skills  
-- Course materials: https://github.com/Jbman444/OpenFoamTraining.git  
+- Course materials: [OpenFOAM Training Repository](https://github.com/Jbman444/OpenFoamTraining.git)
 
 ### Graduate Ambassador – Providing resources to undergrads
 - Connected undergraduate students with graduate school opportunities  
