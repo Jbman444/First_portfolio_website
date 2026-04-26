@@ -115,6 +115,7 @@ const pageTitle = "Notable Projects";
     padding: 0.9rem 1.25rem 5rem;
     display: grid;
     gap: 1rem;
+    align-content: start;
   }
 
   /* PAGE INTRO */
@@ -186,10 +187,17 @@ const pageTitle = "Notable Projects";
   }
 
   /* LARGE IMAGE AREA */
-  .visual {
+  /* .visual {
     position: relative;
     width: 100%;
     min-height: 320px;
+    background: #e2e8f0;
+    overflow: hidden;
+  } */
+    .visual {
+    position: relative;
+    width: 100%;
+    aspect-ratio: 16 / 10;
     background: #e2e8f0;
     overflow: hidden;
   }
@@ -242,10 +250,10 @@ const pageTitle = "Notable Projects";
     color: #dbeafe;
   }
 
-  /* RESPONSIVE */
   @media (max-width: 900px) {
     .projects-page {
-      padding-bottom: 5.5rem;
+      width: 100%;
+      padding: 0.9rem 1rem 5.5rem;
     }
 
     .featured-grid {
@@ -253,7 +261,26 @@ const pageTitle = "Notable Projects";
     }
 
     .visual {
-      min-height: 260px;
+      min-height: 0;
+      aspect-ratio: 16 / 10;
+    }
+  }
+
+  @media (max-width: 500px) {
+    .projects-page {
+      padding: 0.75rem 0.75rem 5.5rem;
+    }
+
+    .floating-name {
+      font-size: clamp(1.8rem, 9vw, 2.4rem);
+    }
+
+    .visual {
+      aspect-ratio: 4 / 3;
+    }
+
+    .card-content {
+      padding: 0.8rem;
     }
   }
 </style>

@@ -138,15 +138,16 @@ const {
 
   @media (max-width: 700px) {
     .page-shell {
-      padding: 0.9rem 0.9rem 1.5rem;
+      width: 100%;
+      padding: 0.9rem 1rem 5rem;
     }
 
-    .page-content {
-      gap: 1rem;
+    h1 {
+      font-size: clamp(1.8rem, 9vw, 2.4rem);
     }
 
-    :global(.content-block) {
-      padding: 0.85rem;
+    .page-description {
+      font-size: 0.95rem;
     }
   }
 </style>

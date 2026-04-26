@@ -31,7 +31,7 @@ Public Speaking • Mentorship • Science Communication • Curriculum Developm
 ## Key Initiatives
 
 ### Future Aggies Program – Student Outreach
-- Returned to :contentReference[oaicite:1]{index=1} to mentor students through the Future Aggies program  
+- Returned to Colton High School to mentor students through the Future Aggies program
 - Shared firsthand experience transitioning from high school to engineering studies  
 - Provided guidance on financial aid, academic preparation, and student life in engineering  
 
