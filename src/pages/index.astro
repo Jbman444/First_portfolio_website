@@ -159,6 +159,7 @@ const pageTitle = "Jorge L. Vargas Lara M.S.";
     padding: 0.85rem 2rem 4rem;
     display: grid;
     gap: 1.2rem;
+    align-content: start;
   }
 
   .hero {
@@ -374,21 +375,38 @@ const pageTitle = "Jorge L. Vargas Lara M.S.";
     }
   }
 
-  @media (max-width: 700px) {
-    .hero {
-      grid-template-columns: 1fr;
-    }
-
-    .home-page {
-      padding: 0.85rem 1rem 4rem;
-    }
-
-    .profile-image {
-      width: min(260px, 72vw);
-    }
-
-    .card-visual {
-      aspect-ratio: 16 / 9;
-    }
+@media (max-width: 700px) {
+  .hero {
+    grid-template-columns: 1fr;
   }
+
+  .home-page {
+    padding: 0.85rem 1rem 1.5rem;
+    gap: 1.5rem;
+    align-content: start;
+  }
+
+  .featured-grid {
+    grid-template-columns: 1fr;
+    gap: 1.25rem;
+    align-items: start;
+  }
+
+  .card {
+    /* height: auto; */
+    min-height: 0;
+  }
+
+  .card:hover {
+    transform: none;
+  }
+
+  .profile-image {
+    width: min(260px, 72vw);
+  }
+
+  .card-visual {
+    aspect-ratio: 16 / 9;
+  }
+}
 </style>
