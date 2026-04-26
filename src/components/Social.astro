@@ -19,9 +19,7 @@ if (key === "linkedin") {
 
 <a
   href={url}
-  class={`social-btn ${
-    key === "email" ? "email-btn" : key === "resume" ? "resume-btn" : ""
-  }`}
+  class="social-btn"
   target={key === "email" ? undefined : "_blank"}
   rel={key === "email" ? undefined : "noopener noreferrer"}
 >
@@ -51,39 +49,15 @@ if (key === "linkedin") {
     background: #f1f5f9;
   }
 
-  /* ✅ EMAIL ALWAYS RED */
-  .email-btn {
-    background: #ff7f66 !important;
-    color: white !important;
-    border: none !important;
-  }
-
-  .email-btn:hover,
-  .email-btn:focus {
-    background: #ff6a4d !important;
-  }
-
-  /* DARK MODE BASE */
+  /* Dark mode */
   :global(html.dark) .social-btn {
     background: white;
     color: black;
     border-color: white;
   }
 
-  /* ❗ REMOVE or weaken this override effect */
   :global(html.dark) .social-btn:hover,
   :global(html.dark) .social-btn:focus {
     background: #e5e7eb;
-  }
-
-  /* ✅ FORCE EMAIL TO IGNORE DARK MODE */
-  :global(html.dark) .email-btn {
-    background: #ff7f66 !important;
-    color: white !important;
-  }
-
-  :global(html.dark) .email-btn:hover,
-  :global(html.dark) .email-btn:focus {
-    background: #ff6a4d !important;
   }
 </style>
