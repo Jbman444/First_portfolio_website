@@ -1,4 +1,13 @@
 /* ===== Base ===== */
+
+html,
+body {
+  min-height: 100vh;
+  min-height: 100dvh; /* Chrome mobile fix */
+  max-width: 100%;
+  overflow-x: hidden;
+}
+
 html {
   background-color: #f1f5f9;
   font-family: sans-serif;
